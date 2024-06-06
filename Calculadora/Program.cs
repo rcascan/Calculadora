@@ -28,7 +28,7 @@ namespace Calculadora
 
             while (exit)
             {
-
+                string[] menu = { "sumar", "restar", "dividir", "potencia", "area de un triangulo", "area de un cuadrado", "salir" };
 
                 Console.Clear();
                 Console.WriteLine("Menú Principal");
@@ -43,52 +43,66 @@ namespace Calculadora
                 
                 String opcion = Console.ReadLine();
 
-                switch (opcion.ToLower())
+                for (int i = 0; i <menu.Length ; i++)
                 {
-                    case "sumar":
 
-                        sumar();
-                        break;
+                    if (opcion.ToLower().Equals(menu[i]))
+                    {
+                        switch (opcion.ToLower())
+                        {
+                            case "sumar":
 
-                    case "restar":
+                                sumar();
+                                break;
 
-                        restar();
-                        break;
+                            case "restar":
 
-                    case "dividir":
+                                restar();
+                                break;
 
-                        dividir();
-                        break;
+                            case "dividir":
 
-                    case "salir":
-                        Console.Clear();
-                        exit = false;
-                        Console.WriteLine("Saliendo del programa...");
-                        break;
+                                dividir();
+                                break;
 
-                    case "potencia":
+                            case "salir":
+                                Console.Clear();
+                                exit = false;
+                                Console.WriteLine("Saliendo del programa...");
+                                break;
 
-                        potencia();
-                        break;
+                            case "potencia":
+
+                                potencia();
+                                break;
 
 
-                    case "area de un triangulo":
+                            case "area de un triangulo":
 
-                        areaTriangulo();
-                        break;
+                                areaTriangulo();
+                                break;
 
-                    case "area de un cuadrado":
+                            case "area de un cuadrado":
 
-                        areaCuadrado();
-                        break;
+                                areaCuadrado();
+                                break;
 
-                    default:
-                        Console.Clear();
-                        Console.WriteLine("Opción no válida, intenta de nuevo.");
-                        Console.WriteLine("Presiona cualquier tecla para continuar...");
-                        Console.ReadKey();
-                        break;
+                            default:
+                                Console.Clear();
+                                Console.WriteLine("Opción no válida, intenta de nuevo.");
+                                Console.WriteLine("Presiona cualquier tecla para continuar...");
+                                Console.ReadKey();
+                                break;
+                        }
+                    }
+
+
+
+
                 }
+                
+
+
 
 
 
